@@ -4,7 +4,7 @@ import { Formik } from 'formik';
 import { ErrorLoger, Layout, Constants } from '@ccu/shared';
 import { Validations } from '@ccu/shared';
 import Input from '../../components/login/input';
-import useContextAuthentication from '../../../infraestructure/hooks/useContextAuthenticatin';
+import useContextAuthentication from '../../../infraestructure/hooks/useContextAuthentication';
 import { styles } from './LoginScreen.styles';
 
 const { colors } = Constants;
