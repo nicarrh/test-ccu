@@ -1,6 +1,17 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "module": "ES2022",
+    "sourceMap": true,
+    "jsx": "react",
+
+    "paths": {
+      "@ccu/auth": ["src/auth/index.ts"],
+      "@ccu/shared": ["src/shared/index.ts"],
+      "@ccu/product": ["src/product/index.ts"],
+      "@ccu/app": ["src/app/index.ts"]
+    }
   }
 }
