@@ -1,8 +1,8 @@
-import useProduct from './hooks/useProduct';
+import useProduct from './infraestructure/hooks/useProduct';
 import ProductRepository from './repositories/ProductRepository';
-import ProductListScreen from './screens/product-list/ProductListScreen';
-import { ProductProvider, ProductContext } from './contexts/ProductContext';
-import ProductDetailScreen from './screens/product-details/ProductDetailScreen';
+import ProductListScreen from './presentation/screens/product-list/ProductListScreen';
+import { ProductProvider, ProductContext } from './infraestructure/contexts/ProductContext';
+import ProductDetailScreen from './presentation/screens/product-details/ProductDetailScreen';
 
 export {
   ProductListScreen,
