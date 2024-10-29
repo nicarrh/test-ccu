@@ -9,13 +9,13 @@ import {
 import React, { useEffect, lazy, Suspense, useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import { Product } from '../../repositories/ProductRepository';
+import { Product } from '../../../repositories/ProductRepository';
 import { Constants, RootStackParamList } from '@ccu/shared';
-import useContextProduct from 'src/product/hooks/useContextProduct';
+import useContextProduct from '../../../infraestructure/hooks/useContextProduct';
 import { useContextAuthentication } from '@ccu/auth';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-const LazyProducItem = lazy(() => import('src/product/components/product-list/ProductItem'));
+const LazyProducItem = lazy(() => import('../../components/product-list/ProductItem'));
 
 type Props = NativeStackScreenProps<RootStackParamList, 'ProductList'>;
 
@@ -73,25 +73,8 @@ const ProductListScreen = ({ navigation }: Props) => {
           ListFooterComponent={() =>
             showLogout && (
               <TouchableOpacity onPress={handleOnPressLogout}>
-                <View
-                  style={{
-                    height: 50,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    backgroundColor: Constants.colors.softBlue,
-                    borderRadius: 10,
-                    marginTop: 10,
-                    flexDirection: 'row',
-                  }}>
-                  <Text
-                    style={{
-                      fontSize: 15,
-                      fontWeight: 'bold',
-                      color: Constants.colors.white,
-                      marginRight: 10,
-                    }}>
-                    Cerrar sesión
-                  </Text>
+                <View style={styles.logoutButton}>
+                  <Text style={styles.logoutButtonText}>Cerrar sesión</Text>
                   <Ionicons name="log-out-outline" size={30} color={Constants.colors.white} />
                 </View>
               </TouchableOpacity>
@@ -111,5 +94,20 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logoutButton: {
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: Constants.colors.softBlue,
+    borderRadius: 10,
+    marginTop: 10,
+    flexDirection: 'row',
+  },
+  logoutButtonText: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: Constants.colors.white,
+    marginRight: 10,
   },
 });

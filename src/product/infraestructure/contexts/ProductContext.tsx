@@ -1,7 +1,7 @@
 import React from 'react';
 import { createContext, useMemo } from 'react';
 import useProduct from '../hooks/useProduct';
-import { Product } from '../repositories/ProductRepository';
+import { Product } from '../../repositories/ProductRepository';
 
 export type ProductContextType = {
   product: Product | null;

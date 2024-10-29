@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import Img from '../shared/Img';
-import { Product } from '../../repositories/ProductRepository';
+import { Product } from '../../../repositories/ProductRepository';
 import styles from './ProductItem.styles';
 
 type Props = {

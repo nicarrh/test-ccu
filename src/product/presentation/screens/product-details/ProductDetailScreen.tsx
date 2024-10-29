@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { Constants, Layout, RootStackParamList } from '@ccu/shared';
 import Img from '../../components/shared/Img';
-import useContextProduct from '../../hooks/useContextProduct';
+import useContextProduct from '../../../infraestructure/hooks/useContextProduct';
 import styles from './ProductDetailScreen.styles';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'ProductDetails'>;

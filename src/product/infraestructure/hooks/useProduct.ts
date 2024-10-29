@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ProductRepository, { Product } from '../repositories/ProductRepository';
+import ProductRepository, { Product } from '../../repositories/ProductRepository';
 
 const useProduct = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
